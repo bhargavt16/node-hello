@@ -29,7 +29,7 @@ pipeline{
         }
         stage("Run the application"){
             steps{
-                sh "docker-compose up"
+                sh "docker-compose up -d"
             }
         }
     }
