@@ -22,9 +22,14 @@ pipeline{
                 sh "docker push bhargavt16/bhargav-node:v5"
             }
         }
+        stage("killing the docker containers"){
+        	steps{
+        		sh "docker-compose down"
+        	}
+        }
         stage("Run the application"){
             steps{
-                sh "docker run -p 3000:3000 -d bhargavt16/bhargav-node:v5"
+                sh "docker-compose up"
             }
         }
     }
