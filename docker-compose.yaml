@@ -14,5 +14,4 @@ services:
     ports:
       - "27017:27017"
     container_name: mongo-db
-    volumes:
-      - ./db/:/data/db
+
